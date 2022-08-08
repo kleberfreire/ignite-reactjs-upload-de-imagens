@@ -74,7 +74,7 @@ export default function Home(): JSX.Element {
           (hasNextPage && (
             <Button
               bg="orange.500"
-              color="gray.50"
+              color="pGray.50"
               onClick={() => fetchNextPage()}
             >
               {isFetchingNextPage ? 'Carregando...' : 'Carregar mais'}
