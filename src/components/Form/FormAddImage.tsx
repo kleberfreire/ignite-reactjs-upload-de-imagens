@@ -100,7 +100,6 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
           isClosable: true,
         });
       }
-      console.log(data); //
       await mutation.mutateAsync(data);
     } catch {
       toast({
