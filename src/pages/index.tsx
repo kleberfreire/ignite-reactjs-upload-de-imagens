@@ -59,8 +59,6 @@ export default function Home(): JSX.Element {
     return <Error />;
   }
 
-  console.log(hasNextPage);
-
   return (
     <>
       <Header />
