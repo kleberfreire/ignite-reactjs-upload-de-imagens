@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
-
 import { Button, Box } from '@chakra-ui/react';
 import { useMemo } from 'react';
-import { useInfiniteQuery, useMutation } from 'react-query';
+import { useInfiniteQuery } from 'react-query';
 
 import { Header } from '../components/Header';
 import { CardList } from '../components/CardList';
