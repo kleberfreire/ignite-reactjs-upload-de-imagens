@@ -17,18 +17,18 @@ interface CardsProps {
 
 export function CardList({ cards }: CardsProps): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [imageSelectedUrl, setImageSelectedUrl] = useState<string>();
-  const handeredViewImage = (url: string): void => {
-    setImageSelectedUrl(url);
+  const [imageSelectedUrl, setImageSelectedUrl] = useState('');
+  const handleViewImage = (url: string): void => {
     onOpen();
+    setImageSelectedUrl(url);
   };
 
   return (
     <>
       {/* TODO CARD GRID */}
-      <SimpleGrid columns={3} spacing={40}>
+      <SimpleGrid columns={[1, 2, 3]} spacing="40px">
         {cards.map(card => (
-          <Card key={card.id} viewImage={handeredViewImage} data={card} />
+          <Card key={card.id} viewImage={handleViewImage} data={card} />
         ))}
       </SimpleGrid>
 
